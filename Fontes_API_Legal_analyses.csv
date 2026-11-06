@@ -1,0 +1,368 @@
+,,,,,,documentacao,DADOS VERIFICAVEIS,BASE LEGAL,OBS,,ANALISE DA BASE LEGAL,,
+Prioridade,Fase,Item verificável,O que a Legal Analysis verifica,Fonte / serviço esperado,Aplicação,,,,,,Legenda,Linhas,O que sinaliza
+,Pré-oferta,Identidade oficial do imóvel,"Endereço, unidade, prédio, parcel/folio, lote e tipo de imóvel",US Census Geocoder; Miami-Dade Property Appraiser; dados imobiliários Leevli,Todos,https://geocoding.geo.census.gov/geocoder/Geocoding_Services_API.html | https://www.miamidadepa.gov/pa/real-estate/property-search.page | https://developer.realestateapi.com/reference/welcome-to-realestateapi,"• Endereço padronizado
+• Cidade, estado, ZIP e county
+• Coordenadas geográficas
+• Candidatos de endereço e geografia Census associada","F.S. §193.114(2) e §28.222.
+Confrontar endereço, folio e características do cadastro fiscal com a descrição do instrumento registrado. Geocodificação é apoio de localização; não comprova limites, titularidade ou identidade jurídica da unidade.
+Fontes: [1] · [2]",OK,,Link inacessível,"13, 14, 16, 17, 18, 21, 30, 35, 53","A página retornou erro ou não permitiu conferir o conteúdo. Isso indica falha de acesso na verificação, não prova, por si só, que a URL foi removida."
+,Pré-oferta,Dados de anúncio e MLS,"Preço, metragem, características e histórico comercial como contexto",Integração MLS/IDX da Leevli,Todos,https://developer.realestateapi.com/reference/realestateapi-mls-dataset-and-apis,-,"F.S. §475.25(1)(b)-(c) e §501.204.
+Anúncios e representações comerciais não devem ser enganosos. MLS é informação comercial sujeita à licença/contrato do provedor; preço, área e características precisam de confirmação documental. Essas normas não concedem acesso nem licença de uso à API.
+Fontes: [1] · [2]",OK,,Link alternativo,"13, 14, 16, 17, 18, 19, 20, 21, 30, 32, 53",O OBS já contém um link alternativo sugerido.
+,Pré-oferta,Histórico de vendas,Datas e valores de vendas disponíveis,Florida DOR Sales Data; ATTOM; dados Leevli,Todos,https://developer.realestateapi.com/reference/welcome-to-realestateapi | https://floridarevenue.com/property/Pages/DataPortal.aspx | https://www.miamidadepa.gov/pa/real-estate/property-search.page,"• Data e preço da última venda
+• Histórico de vendas disponível
+• Parcel/APN vinculado à transação
+• Código de qualificação da transferência
+• Indicador de imóvel vago ou melhorado na venda","F.S. §193.114(2)(n) e §28.222.
+O cadastro fiscal contém dados de transferências e qualificação da venda; os instrumentos são consultados nos Official Records. Separar preço registrado, data da transferência e data do registro; venda anterior não comprova valor atual ou título livre.
+Fontes: [1] · [2]",OK,,Escopo parcial,"19, 32, 42, 44, 58, 60",A fonte aborda parte do tema ou se aplica apenas a certas situações; o texto do OBS explica o limite.
+,Pré-oferta,Foreclosure e ações sobre o imóvel,Indicadores de execução hipotecária ou cobrança,Miami-Dade Clerk; County Clerk Civil Dockets,Todos,https://developer.realestateapi.com/reference/welcome-to-realestateapi | https://www.miamidadeclerk.gov/clerk/official-records.page,"• Indicadores de pre-foreclosure, auction e REO
+• Tipo e data de documento de foreclosure, quando disponível
+• Registros de casos civis pesquisáveis por parte ou imóvel
+• Documento, data de registro e partes relacionadas","F.S. §702.01 e §48.23.
+Foreclosure hipotecária é procedimento judicial; verificar processo, partes, imóvel, decisões e eventual lis pendens. Indicador de provedor não comprova execução vigente ou perda da propriedade; confirmar o estágio nos autos.
+Fontes: [1] · [2]",OK,,Conteúdo divergente,20,"O link indicado trata de inundação, enquanto o item é sobre risco de vento/furacão."
+,Pré-oferta,Flood zone oficial,"Zona FEMA, painel e data de vigência",FEMA National Flood Hazard Layer — NFHL,Todos,https://www.fema.gov/flood-maps/tools-resources/flood-map-products/national-flood-hazard-layer,"• Designação oficial da zona de inundação
+• Descrição da zona e painel FIRM
+• Data efetiva do painel
+• Geometria/localização da área mapeada","44 CFR §60.3; F.S. §689.302.
+Relacionar zona/painel FEMA vigente às regras locais de floodplain e ao disclosure do vendedor. O enquadramento cartográfico não certifica ausência de inundação nem determina sozinho seguro ou conformidade da edificação.
+Fontes: [1] · [2]",OK,,Validação local,"43, 45, 46",A resposta depende das regras ou documentos da associação e/ou da jurisdição do imóvel.
+,Pré-oferta,Proximidade ambiental,Instalações e ocorrências ambientais próximas,EPA ECHO; Florida DEP Open Data,Todos,https://echo.epa.gov/tools/web-services | https://geodata.dep.state.fl.us/,"• Instalações reguladas próximas
+• Nome, endereço e coordenadas da instalação
+• Programas regulatórios e identificadores ambientais
+• Status de conformidade e inspeções, quando publicados","40 CFR Part 312 (All Appropriate Inquiries), quando aplicável.
+A consulta ambiental apoia a triagem de potencial exposição e responsabilidade. Proximidade de instalação regulada não prova contaminação no imóvel nem substitui avaliação ambiental por profissional; AAI não é exigência universal para toda compra residencial.
+Fontes: [1]",OK,,Prova insuficiente,48,As fontes não comprovam que os relatos de moradores foram verificados.
+,Pré-oferta,Contaminação ambiental,Apenas sinais e proximidade; não uma conclusão de contaminação,EPA ECHO; Florida DEP,Todos,https://echo.epa.gov/tools/web-services | https://geodata.dep.state.fl.us/,"• Sinais de instalações ou ocorrências ambientais próximas
+• Identificadores e programas regulatórios associados
+• Localização e distância/proximidade geográfica
+• Dados disponíveis no conjunto DEP selecionado","CERCLA §§101(40), 107; 40 CFR Part 312; F.S. §376.308.
+Responsabilidade e defesas ambientais dependem de fatos e requisitos próprios. Encaminhar indícios para avaliação ambiental; consulta EPA/DEP ou distância de ocorrência não permite concluir contaminação, inocuidade ou elegibilidade a uma defesa.
+Fontes: [1] · [2]",OK,,Validação documental,"49, 50, 51",A conclusão depende dos documentos específicos do imóvel ou da transação.
+,Pré-oferta,Jurisdição responsável,"Município, condado, estado e órgão competente por tema",Jurisdiction Registry Leevli; dados Census/GIS,Todos,https://geocoding.geo.census.gov/geocoder/Geocoding_Services_API.html | https://floridarevenue.com/property/Pages/DataPortal.aspx,"• Estado, county e município associados ao endereço
+• Geografia Census aplicável
+• FIPS, quando retornado
+• Candidatos de endereço para confirmação","F.S. §§125.01, 166.021 e 553.80.
+Identificar município ou área não incorporada e a autoridade competente por tema. Miami-Dade e Broward têm competências e regras locais distintas; endereço postal/Census não substitui a confirmação oficial da jurisdição.
+Fontes: [1] · [2] · [3]",OK,,Validação contratual,"52, 54, 55, 56, 57, 59","A conclusão depende do contrato, adendos, prazos ou avisos assinados."
+,Pré-oferta,Avaliação fiscal,"Valor avaliado, classificação tributária e histórico",Miami-Dade Property Appraiser; Florida DOR,Todos,https://www.miamidadepa.gov/pa/real-estate/property-search.page | https://floridarevenue.com/property/Pages/DataPortal.aspx,"• Valor justo/mercado, valor avaliado e valor tributável
+• Classe e uso do imóvel
+• Identificador de parcel/folio
+• Ano e versão do roll fiscal","F.S. §§193.011 e 193.114.
+A avaliação fiscal segue critérios legais e distingue just value, assessed value e taxable value. Confirmar exercício fiscal e benefícios; não tratar valor tributável como avaliação de mercado ou previsão automática do imposto do comprador.
+Fontes: [1] · [2]",OK,,,,
+,Pré-oferta,Impostos e inadimplência,"Tax status, delinquencies, tax certificates e tax deed indicators",Miami-Dade Tax Collector,Todos,https://floridarevenue.com/property/Pages/DataPortal.aspx | https://www.miamidadepa.gov/pa/real-estate/property-search.page,"• Ano de inadimplência fiscal, quando disponível
+• Indicador de tax lien
+• Avaliações não ad valorem vinculadas ao parcel
+• Dados de imposto publicados pelo county/roll fiscal","F.S. §§197.122, 197.432 e 197.502.
+Impostos podem gerar lien, tax certificate e procedimento de tax deed. Verificar valores e estágio com o Tax Collector/Clerk competente; cadastro do Property Appraiser ou ausência de indicador agregado não comprova quitação.
+Fontes: [1] · [2] · [3]",OK,,,,
+,Pré-oferta,Isenções e portabilidade,"Homestead exemption, portability e benefícios fiscais",Miami-Dade Property Appraiser; Miami-Dade Tax Collector,Todos,https://www.miamidadepa.gov/pa/real-estate/property-search.page | https://floridarevenue.com/property/Pages/DataPortal.aspx,"• Códigos de isenção aplicáveis
+• Valor de isenção
+• Indicadores Homestead, quando publicados
+• Valores assessed e taxable para cálculo comparativo","F.S. §196.031 e §193.155(3),(8).
+Homestead, reassessment por mudança de titularidade e portabilidade dependem de requisitos próprios. Benefício do vendedor não passa automaticamente ao comprador; confirmar residência, elegibilidade, pedido e avaliação aplicável após a compra.
+Fontes: [1] · [2]",OK,,,,
+,Pré-oferta,Histórico de permits,"Obras, reformas e licenças da unidade, casa ou prédio",Miami-Dade Building Department; sistema municipal competente,Todos,https://www.miamidade.gov/global/economy/building/construction-permitting-procedures.page,"• Número do permit e tipo de trabalho
+• Data de solicitação, emissão e expiração
+• Status do permit
+• Inspeções requeridas e resultados disponíveis
+• Vínculo por endereço ou folio","F.S. §553.79; Florida Building Code, cap. 1, §§105 e 110, com emendas locais.
+Conferir licença, escopo, datas e inspeções no órgão emissor de Miami-Dade/Broward ou município. Permit emitido não equivale a obra concluída, inspeção final aprovada ou autorização de ocupação.
+Fontes: [1] · [2]","[LINK INACESSÍVEL | LINK ALTERNATIVO] LINK [2] ICCSafe retornou erro interno na abertura. Base legal corroborada por F.S. §553.79; alternativa oficial FBC 2023, cap. 1 §§105 e 110: https://floridabuilding.org/Upload/FBC/CodeID_7792_e9ea_UCF-8TH_ED_2023_FBC_BLDG_CH_1--2024-01-02.pdf",,,,
+,Pré-oferta,Permits abertos ou expirados,"Licenças sem encerramento, final inspection ou com pendência",Miami-Dade Building Department; município competente,Todos,https://www.miamidade.gov/global/economy/building/construction-permitting-procedures.page,"• Permits abertos no endereço/folio
+• Status, hold e requisitos pendentes
+• Inspeção final e histórico de inspeções, quando disponível
+• Relação entre permit master e subsidiary","F.S. §553.79; Florida Building Code §105 e emendas locais.
+Confirmar validade, expiração, renovação e encerramento no Building Department competente. Não concluir irregularidade atual só pelo status histórico; verificar inspeções, regularização e decisões posteriores.
+Fontes: [1] · [2]","[LINK INACESSÍVEL | LINK ALTERNATIVO] LINK [2] ICCSafe retornou erro interno na abertura. F.S. §553.79 verificada; alternativa oficial FBC 2023, cap. 1 §105: https://floridabuilding.org/Upload/FBC/CodeID_7792_e9ea_UCF-8TH_ED_2023_FBC_BLDG_CH_1--2024-01-02.pdf",,,,
+,Pré-oferta,Violação de código,Casos abertos de code enforcement ligados ao imóvel,Miami-Dade EnerGov Land Management Viewer; município competente,Todos,https://www.miamidade.gov/global/economy/building/construction-permitting-procedures.page | https://www.miamidadeclerk.gov/clerk/official-records.page,"• Número e tipo do caso de code enforcement
+• Status do caso e datas relevantes
+• Endereço ou parcel associado
+• Órgão responsável pela fiscalização","F.S. cap. 162, especialmente §162.09, e código local aplicável.
+Verificar infração, ordem, multa, lien e comprovação de cumprimento. Caso aberto não equivale automaticamente a gravame registrado; confirmar competência municipal/condado e eventual liberação.
+Fontes: [1] · [2]",OK,,,,
+,Pré-oferta,Certificate of Occupancy,Existência ou indisponibilidade do certificado de ocupação,Building Department,Todos,https://www.miamidade.gov/global/economy/building/construction-permitting-procedures.page,"• Existência de Certificate of Use/Occupancy ou Certificate of Completion
+• Número do certificado
+• Status da inspeção final vinculada
+• Endereço/permit relacionado","Florida Building Code — Building, §111; F.S. §§553.73 e 553.80; emendas locais.
+Conferir CO e uso autorizado com o órgão emissor. Certificate of Completion e Certificate of Use têm funções distintas e não substituem automaticamente o Certificate of Occupancy; ausência na consulta exige confirmação.
+Fontes: [1] · [2] · [3]","[LINK INACESSÍVEL | LINK ALTERNATIVO] LINK [1] ICCSafe bloqueado (403); §§553.73 e 553.80 conferidas e aderentes ao FBC/CO. Alternativa oficial FBC 2023, cap. 1 §111: https://floridabuilding.org/Upload/FBC/CodeID_7792_e9ea_UCF-8TH_ED_2023_FBC_BLDG_CH_1--2024-01-02.pdf",,,,
+,Pré-oferta,Zoneamento do imóvel,"Zoning designation, uso permitido e overlays",Regrid; Miami-Dade/município planning & zoning,Todos,https://www.miamidade.gov/global/economy/zoning/home.page | https://library.municode.com/fl/miami_-_dade_county/codes/code_of_ordinances,"• Distrito de zoning
+• Future Land Use e classificação do parcel
+• Histórico/resolução de zoning disponível
+• Aplicações e audiências de zoning registradas","F.S. §163.3194; Miami-Dade Code cap. 33; Broward Code cap. 39, nas áreas sob sua aplicação.
+Confirmar distrito, mapa, overlays e regras específicas do lote. Nos municípios, consultar o código municipal; zoning e future land use são camadas distintas, e a classificação fiscal não autoriza uso.
+Fontes: [1] · [2] · [3]",[LINK INACESSÍVEL | LINK ALTERNATIVO] LINK [3] abriu apenas o índice Municode (sem texto); índice indica Cap. 39 Zoning. Alternativa direta do código: https://library.municode.com/fl/broward_county/codes/code_of_ordinances?nodeId=PTIICOOR_CH39ZO_ARTXXIICOFADI_S39-363PEUS,,,,
+,Pré-oferta,Compatibilidade de uso,Se o uso aparente é compatível com a classificação pública,Zoning authority; Property Appraiser,Todos,https://www.miamidade.gov/global/economy/zoning/home.page | https://library.municode.com/fl/miami_-_dade_county/codes/code_of_ordinances,"• Classificação de zoning do parcel
+• Future Land Use aplicável
+• Histórico de approvals, conditions ou variances
+• Fonte oficial para validação de uso permitido","F.S. §163.3194; regras de zoning e aprovações locais do parcel.
+Comparar uso pretendido com usos permitidos, condições, variances e eventuais direitos de uso não conforme. Miami-Dade cap. 33/Broward cap. 39 não substituem a norma municipal competente; uso cadastrado não prova aprovação.
+Fontes: [1] · [2] · [3]",[LINK INACESSÍVEL | LINK ALTERNATIVO] LINK [3] abriu apenas o índice Municode (sem texto); índice indica Cap. 39 Zoning. Alternativa direta do código: https://library.municode.com/fl/broward_county/codes/code_of_ordinances?nodeId=PTIICOOR_CH39ZO_ARTXXIICOFADI_S39-363PEUS,,,,
+,Pré-oferta,Restrições de locação pública,"Regras municipais/condado sobre aluguel e STR, quando automatizadas",Municipal ordinances; county/state rules,Todos,https://library.municode.com/fl/miami_-_dade_county/codes/code_of_ordinances,"• Código/ordinance municipal ou county aplicável
+• Restrições públicas de locação ou short-term rental, quando publicadas
+• Jurisdição responsável
+• Link para a regra oficial; regras privadas de HOA ficam separadas","F.S. §509.032(7); Miami-Dade Code §33-28, quando aplicável; ordinances municipais competentes.
+Verificar limites da competência local, licenciamento e regras de vacation rental. Em Broward, identificar o município/área não incorporada; não presumir regra única de STR para todo o condado. Regras privadas são análise separada.
+Fontes: [1] · [2]","[ESCOPO PARCIAL | LINK ALTERNATIVO] ATENÇÃO: links estaduais/municipais conferidos. F.S. §509.032(7)(b) limita poder local sobre vacation rentals (exceção para regras anteriores a 1/6/2011); Miami-Dade §33-28 vale para área não incorporada, e municípios têm regras próprias. O Municode original abriu índice sem texto; página oficial do condado confirma requisitos e direciona à seção 33-28: https://library.municode.com/fl/miami_-_dade_county/codes/code_of_ordinances?nodeId=PTIIICOOR_CH33ZO_ARTIINGE_S33-28VARE",,,,
+,Pré-oferta,Risco de furacão e vento,Zona de vento/hurricane aplicável ao local,Fontes federais/estaduais e building records,Todos,https://www.noaa.gov/hurricane-prep | https://www.fema.gov/flood-maps/tools-resources/flood-map-products/national-flood-hazard-layer,"• Localização do imóvel para cruzamento com mapas de risco
+• Dados construtivos relevantes, como ano e material de cobertura, quando disponíveis
+• Referência a requisitos de construção/inspeção aplicáveis
+• Não retorna uma classificação individual de risco de furacão","F.S. §553.73; Florida Building Code e disposições HVHZ aplicáveis a Miami-Dade/Broward.
+Checar requisitos de vento e proteção conforme tipo de obra, licença e edição do código. Conformidade técnica exige documentação/profissional habilitado; mapa de inundação FEMA não é mapa de risco de vento.
+Fontes: [1] · [2] · [3]","[CONTEÚDO DIVERGENTE | LINK ALTERNATIVO] DIVERGÊNCIA: NOAA é orientação geral de preparo; FEMA NFHL (link listado) trata de perigo de inundação, não classifica risco de vento/furacão. F.S. §553.73 e páginas FBC/Miami-Dade são normas/códigos e aprovações construtivas, não avaliação individual de risco. Para dado de vento por endereço, consultar ASCE Hazard Tool: https://ascehazardtool.org/",,,,
+,Pré-oferta,Elevação e risco de inundação,"Elevation certificate, quando existir, e sinais de exposição",FEMA NFHL; documentos registrados,Todos,https://www.fema.gov/flood-maps/tools-resources/flood-map-products/national-flood-hazard-layer,"• Zona FEMA e painel aplicável
+• Localização/geométrica do imóvel ou prédio
+• Indicação de certificado de elevação somente se constar em documento/registro disponível
+• Data de vigência do mapa","44 CFR §60.3 e floodplain ordinance local.
+Comparar elevação certificada, datum e base flood elevation aplicável, com as exigências locais. NFHL não fornece por si só a elevação do piso; solicitar certificado/levantamento quando necessário. Não generalizar exigência a imóveis fora do seu âmbito.
+Fontes: [1]","[LINK INACESSÍVEL | LINK ALTERNATIVO] LINK FEMA NFHL [I] retornou 403 na abertura; §60.3 foi aberto e trata dos critérios de floodplain, inclusive registros de elevação. A referência FEMA permanece pertinente; acesso alternativo oficial ao mapa: https://msc.fema.gov/portal/home",,,,
+,Pré-oferta,Proprietário registrado,Nome do proprietário e forma de titularidade,"Miami-Dade Clerk Official Records; ATTOM, se licenciado",Todos,https://www.miamidadepa.gov/pa/real-estate/property-search.page | https://www.miamidadeclerk.gov/clerk/official-records.page,"• Nome do proprietário ou entidade, quando publicado
+• Endereço postal do proprietário, quando disponibilizado pela fonte
+• Indicadores de owner-occupied, absentee ou corporate-owned
+• Parcel/folio associado","F.S. §§689.01, 695.01 e 193.114(2)(p).
+Conferir titular no deed e cadeia registral; cadastro fiscal serve como indício. Nome coincidente não confirma poderes de venda, capacidade, interesses de terceiros ou inexistência de defeitos no título.
+Fontes: [1] · [2] · [3]",OK,,,,
+,Pré-oferta,Escritura e descrição legal,"Deed, legal description e indicadores de cadeia de titularidade",Miami-Dade Clerk Official Records,Todos,https://www.miamidadeclerk.gov/clerk/official-records.page,"• Tipo de instrumento registrado, como deed
+• Data de registro
+• Partes envolvidas
+• Descrição legal, book/page ou CFN, quando disponível","F.S. §§689.01, 695.01 e 28.222.
+Examinar instrumento de transmissão, formalidades, descrição legal e sequência dos registros. Deed registrado não equivale a título certificado; divergências de descrição ou cadeia exigem revisão jurídica/title examination.
+Fontes: [1] · [2] · [3]",OK,,,,
+,Pré-oferta,Hipotecas registradas,"Mortgages, satisfactions e releases registrados",Miami-Dade Clerk Official Records; ATTOM,Todos,https://www.miamidadeclerk.gov/clerk/official-records.page,"• Instrumentos de mortgage registrados
+• Data, partes, book/page ou CFN
+• Satisfactions, releases e assignments registrados
+• Saldo estimado somente quando fornecido por provedor agregado","F.S. §§697.02, 695.01 e 701.04.
+Hipoteca constitui garantia; confrontar mortgage, assignments e satisfaction/release. Saldo registrado ou estimado não é payoff atual. Ausência de baixa exige esclarecimento, e saldo deve ser confirmado com credor/closing agent.
+Fontes: [1] · [2] · [3]",OK,,,,
+,Pré-oferta,Liens e gravames registrados,"Liens, condo/HOA liens e outros encumbrances registrados",Miami-Dade Clerk Official Records,Todos,https://www.miamidadeclerk.gov/clerk/official-records.page,"• Claims of lien, judgments ou UCC registrados
+• Tipo de gravame, partes e data de registro
+• Livro/página ou CFN
+• Liberações/satisfactions quando registradas","F.S. §§713.08 (construction liens), 55.10 (judgment liens), 718.116 (condomínio) e 720.3085 (HOA).
+Classificar o gravame e verificar registro, prioridade, vigência e liberação segundo seu regime. Busca sem resultado não assegura ausência de obrigações; impostos e outros liens têm regras próprias.
+Fontes: [1] · [2] · [3] · [4]",OK,,,,
+,Pré-oferta,Lis pendens,Processo pendente registrado que pode afetar o imóvel,Miami-Dade Clerk Official Records,Todos,https://www.miamidadeclerk.gov/clerk/official-records.page,"• Instrumento de lis pendens registrado
+• Partes, data, CFN/book-page e descrição legal
+• Referência ao processo quando informada no registro
+• Não determina o mérito ou resultado da ação","F.S. §48.23.
+Verificar notice of lis pendens, descrição do imóvel, processo vinculado e eventual expiração, retirada ou discharge. É aviso de litígio com efeitos definidos em lei; não é decisão de mérito nem prova automática de dívida.
+Fontes: [1]",OK,,,,
+,Pré-oferta,Easements e direitos de passagem,"Easements, rights-of-way e limitações registradas","Deed, plat e Official Records","Casa, townhouse, terreno",https://www.miamidadeclerk.gov/clerk/official-records.page,"• Easements e rights-of-way descritos em instrumento ou plat
+• Descrição legal do lote
+• Plat book/page ou CFN
+• Partes e data do documento registrado","F.S. §695.01; §704.01 para easements por necessidade.
+Confrontar easement/deed/plat e survey para localização e extensão do direito. Servidões expressas e direitos não dependentes de registro têm fundamentos distintos; busca registral isolada não elimina direitos de passagem.
+Fontes: [1] · [2]",OK,,,,
+,Pré-oferta,Confirmação da unidade condominial,Se a unidade selecionada pertence ao prédio e ao folio corretos,Miami-Dade Property Appraiser; declaração do condomínio,Condomínio,https://www.miamidadepa.gov/pa/real-estate/property-search.page,"• Folio/unidade e identificação do prédio
+• Endereço e legal description da unidade
+• Tipo de propriedade e associação quando indicada
+• Candidatos que exigem confirmação do usuário","F.S. §718.104(2),(4) e §718.106.
+A declaração registrada e seus anexos identificam unidade, limites e direitos associados. Cruzar unidade e descrição legal com deed e folio; número postal ou anúncio não basta.
+Fontes: [1] · [2]",OK,,,,
+,Pré-oferta,Estacionamento e storage,"Se são deeded, assigned ou limited common elements","Deed, plat e condominium declaration",Condomínio,https://www.miamidadeclerk.gov/clerk/official-records.page,"• Referência registrada a parking ou storage
+• Natureza: deeded, assigned ou limited common element, quando o documento informar
+• Número/descrição da vaga ou depósito
+• Instrumento e página de origem","F.S. §718.106(2) e declaração registrada.
+Determinar se parking/storage é propriedade separada, direito de uso atribuído ou limited common element, e verificar condições de transferência. A natureza do direito depende dos instrumentos; identificação no anúncio não assegura titularidade.
+Fontes: [1] · [2]",OK,,,,
+,Pré-oferta,Obras possivelmente não permitidas,Divergência entre área/obras registradas e o anúncio,Building Department; Property Appraiser; listing Leevli,"Casa, townhouse, condomínio",https://www.miamidade.gov/global/economy/building/construction-permitting-procedures.page | https://www.miamidadepa.gov/pa/real-estate/property-search.page,"• Área construída, lote, ano de construção e características públicas
+• Permits e datas de emissão/finalização disponíveis
+• Dados MLS de área e características anunciadas
+• Divergências para revisão humana; a API não conclui irregularidade","F.S. §553.79 e Florida Building Code §§105 e 110, com emendas locais.
+Divergência de área ou reforma é alerta para confrontar planos aprovados, permits e inspeções. Cadastro fiscal/MLS não demonstra por si só obra ilegal nem regularização; confirmar com Building Department.
+Fontes: [1] · [2]","[LINK INACESSÍVEL | LINK ALTERNATIVO] LINK [2] ICCSafe retornou erro interno. F.S. §553.79 foi aberta e exige permits/plan review para obras abrangidas; alternativa FBC oficial, cap. 1 §§105 e 110: https://floridabuilding.org/Upload/FBC/CodeID_7792_e9ea_UCF-8TH_ED_2023_FBC_BLDG_CH_1--2024-01-02.pdf",,,,
+,Pré-oferta,CDD e distritos especiais,Cobranças de Community Development District ou special district,Tax Collector; registros do parcel,"Casa, townhouse, condomínio",https://floridarevenue.com/property/Pages/DataPortal.aspx | https://library.municode.com/fl/miami_-_dade_county/codes/code_of_ordinances,"• Assessment não ad valorem ligado ao parcel
+• Distrito/taxing authority responsável
+• Tipo e valor da cobrança, quando publicado
+• Ano fiscal e identificador do parcel","F.S. §190.021 e §197.3632.
+CDD e assessments não ad valorem podem gerar cobranças próprias. Identificar distrito, autoridade, exercício e lançamento ligado ao parcel; conferir o tax bill e documentos do distrito. Valor histórico não assegura cobrança futura.
+Fontes: [1] · [2]",OK,,,,
+,Pré-oferta,Sinkhole e riscos geológicos,Histórico registrado quando houver cobertura oficial,Fontes estaduais aplicáveis,"Casa, townhouse",https://geodata.dep.state.fl.us/,"• Camadas geoespaciais estaduais selecionadas
+• Ocorrências geológicas/ambientais presentes no dataset
+• Localização, atributos e data/vintage da camada
+• Ausência de camada não confirma inexistência de risco","F.S. §627.7073(2)-(3).
+Prevê registros de relatórios e disclosure, antes do closing, de sinkhole claim feito pelo vendedor e pago pela seguradora, inclusive uso dos recursos em reparos. Mapa geológico é triagem; ausência de ocorrência não exclui risco nem substitui laudo.
+Fontes: [1]","[ESCOPO PARCIAL | LINK ALTERNATIVO] ESCOPO LIMITADO: F.S. §627.7073 foi aberta e cobre relatórios de sinkhole, registros e disclosure de claim paga; não é uma base abrangente para riscos geológicos gerais. Para ocorrências/dados geológicos estaduais, consulte Florida DEP/FGS: https://floridadep.gov/fgs/sinkholes/content/subsidence-incident-reports. Registros reportados não significam confirmação profissional de sinkhole.",,,,
+,Pré-oferta,Condição insegura da estrutura,"Casos de unsafe structure, fire ou elevador",County/municipal code enforcement; Fire/Elevator authority,Principalmente condomínio,https://www.miamidade.gov/global/economy/building/construction-permitting-procedures.page,"• Casos de building/code enforcement disponíveis
+• Inspeções de fire, elevator ou life safety, quando publicadas pela autoridade competente
+• Status, datas e localização associada
+• Jurisdição responsável pelo registro","F.S. §§553.80, 633.202 e 399.061; ordens e normas locais de unsafe structures.
+Verificar separadamente segurança estrutural, fire/life safety e elevadores. Inspeção de um sistema não libera os demais; ordem de interdição ou reparo exige confirmação de cumprimento com a autoridade competente.
+Fontes: [1] · [2] · [3]",OK,,,,
+,Pré-oferta,Milestone Inspection,Status da inspeção estrutural obrigatória,Florida DBPR; county records,Condomínio,https://www2.myfloridalicense.com/condos-timeshares-mobile-homes/condominiums-and-cooperatives-sirs-reporting/,"• Relatório/registro de milestone inspection, quando publicado
+• Data da inspeção e condição reportada
+• Informações estruturais ou de life safety disponíveis
+• Associação/prédio vinculado","F.S. §553.899 e §718.112(2)(h).
+Milestone alcança edifícios residenciais em regime condominial/cooperativo com 3 ou mais pavimentos habitáveis: regra de 30 anos e ciclos de 10; autoridade local pode exigir aos 25. Verificar exceções, transições, notificações e fases do relatório; não confundir com SIRS.
+Fontes: [1] · [2]",OK,,,,
+,Pré-oferta,Recertificação 40/50 anos,Status e pendências de recertificação,Miami-Dade ou Broward Building Department,Condomínio,https://www.miamidadepa.gov/pa/real-estate/property-search.page | https://www.miamidade.gov/global/economy/building/construction-permitting-procedures.page,"• Registros de recertificação e inspeções associadas
+• Status, datas e pendências disponíveis
+• Número do processo/permit, quando houver
+• Autoridade municipal ou county responsável","Miami-Dade Code §8-11(f); Broward BORA §110.15.
+“40/50 anos” é rótulo histórico: Miami-Dade prevê início aos 30 anos ou 25 para certos condomínios/cooperativas costeiros; Broward adota 25 anos. Em geral, há ciclos de 10 anos. Confirmar exceções, transições e prazo da notificação local.
+Fontes: [1] · [2] · [3]","[LINK INACESSÍVEL] LINK [2] Fort Lauderdale retornou erro interno. [1] confirma programa e datas locais de Miami-Dade; [3] é página BORA que lista o Building Safety Inspection Program e materiais §110.15, sem conteúdo legal completo. Para status de cada prédio, consultar o órgão local competente; não tratar “40/50 anos” como regra única estadual.",,,,
+,Pré-oferta,SIRS e reserva estrutural,Structural Integrity Reserve Study e necessidade de funding,Florida DBPR; associação; reserve study,Condomínio,https://www2.myfloridalicense.com/condos-timeshares-mobile-homes/condominiums-and-cooperatives-sirs-reporting/,"• Existência de Structural Integrity Reserve Study
+• Itens estruturais e componentes abrangidos
+• Valores/necessidades de reserva somente quando divulgados no estudo
+• Data e associação/prédio associados","F.S. §718.112(2)(f)-(g).
+SIRS e financiamento das reservas estruturais têm critérios e exceções próprios. Para associações existentes abrangidas, há prazo geral de 31/12/2025 e hipótese de coordenação com milestone até 31/12/2026. Confirmar enquadramento, estudo atualizado e plano de funding; conclusão do estudo não prova reserva suficiente.
+Fontes: [1]",OK,,,,
+,Pré-oferta,Existência de HOA ou associação,"Associação obrigatória, voluntária, master ou sub-association",Declaration; Florida DBPR; registros públicos,"Condomínio, townhouse, HOA",https://www2.myfloridalicense.com/condos-timeshares-mobile-homes/condominiums-and-cooperatives-sirs-reporting/ | https://www.miamidadeclerk.gov/clerk/official-records.page,"• Existência e nome da associação, quando identificáveis
+• Tipo de associação: condomínio, master ou sub-association
+• Documentos registrados/publicados disponíveis
+• Identificação do prédio/unidade relacionado","F.S. §§718.104, 718.111; §§720.301 e 720.401.
+Identificar regime jurídico pela declaração e documentos registrados, incluindo master/sub-association. Townhouse é tipologia, não regime legal. Nem toda associação voluntária se enquadra no cap. 720; cadastro DBPR não é lista universal de HOAs.
+Fontes: [1] · [2] · [3] · [4]",OK,,,,
+,Pré-oferta,Taxa mensal da associação,Dues e obrigações mensais identificadas,Estoppel; budget; association records,"Condomínio, townhouse, HOA",https://www2.myfloridalicense.com/condos-timeshares-mobile-homes/condominiums-and-cooperatives-sirs-reporting/ | https://www.miamidadeclerk.gov/clerk/official-records.page,"• Taxa mensal de associação quando presente em MLS ou documento fornecido
+• Frequência de cobrança
+• Associação relacionada
+• Valor atual depende de estoppel, budget ou documento da associação","F.S. §718.116(8) e §720.30851.
+Confirmar taxa, frequência, saldo e cobranças por estoppel vigente, orçamento e documentos da associação. Valor no MLS pode estar desatualizado; observar data e alcance do certificado.
+Fontes: [1] · [2]",OK,,,,
+,Pré-oferta,Special assessment,"Assessments aprovadas, cobradas ou pendentes",Board minutes; budget; estoppel; association notices,"Condomínio, townhouse, HOA",https://www2.myfloridalicense.com/condos-timeshares-mobile-homes/condominiums-and-cooperatives-sirs-reporting/ | https://www.miamidadeclerk.gov/clerk/official-records.page,"• Avisos ou documentos de special assessment fornecidos/publicados
+• Valor, finalidade, cronograma e status, quando constarem no documento
+• Associação e unidade/prédio associados
+• Ausência de documento não significa inexistência","F.S. §§718.112(2)(c), 718.116; §§720.303, 720.315 e 720.30851.
+Conferir aprovação, aviso, finalidade, valor e vencimentos da cobrança extraordinária em atas, orçamento e estoppel. Proposta não equivale a assessment aprovado; divisão entre vendedor/comprador depende também do contrato.
+Fontes: [1] · [2] · [3] · [4] · [5]",OK,,,,
+,Pré-oferta,Saúde financeira da associação,"Orçamento, reservas, inadimplência, dívida e auditoria",Budget; financial statements; reserve study,"Condomínio, townhouse, HOA",https://www2.myfloridalicense.com/condos-timeshares-mobile-homes/condominiums-and-cooperatives-sirs-reporting/ | https://www.miamidadeclerk.gov/clerk/official-records.page,"• Orçamento, financial statements ou reserve study recebidos
+• Receita, despesas, reservas e dívidas descritas nos documentos
+• Período financeiro coberto
+• Não há API pública universal para esses dados","F.S. §718.111(12)-(13), §718.112(2)(f)-(g); §720.303(4)-(7).
+Registros, relatórios financeiros, orçamento e reservas sustentam a análise. Conferir período, auditoria quando exigível, dívidas e suficiência do funding. Dados parciais não permitem certificar solvência; regras de HOA não são idênticas às de condomínio.
+Fontes: [1] · [2] · [3]",OK,,,,
+,Pré-oferta,Litígios da associação,"Ações de construction defect, developer claims e collection actions",County Clerk Civil Dockets; association disclosures,"Condomínio, townhouse, HOA",https://www.miamidadeclerk.gov/clerk/official-records.page | https://www2.myfloridalicense.com/condos-timeshares-mobile-homes/condominiums-and-cooperatives-sirs-reporting/,"• Casos judiciais pesquisáveis envolvendo a associação
+• Partes, case number, court, filing date e status
+• Disclosure ou documento de associação enviado pelo usuário
+• Alegações são apresentadas como alegações, não como fatos confirmados","F.S. §718.111(3),(12) e §720.303(1),(4)-(5).
+Verificar poderes e registros da associação, autos e disclosures disponíveis. Separar alegação, decisão e acordo; conferir identidade da entidade e exposição financeira. Consulta sem ocorrência não certifica inexistência de litígio.
+Fontes: [1] · [2]",OK,,,,
+,Pré-oferta,Seguro master do prédio,"Cobertura, deductible e risco residual do proprietário",Master insurance certificate; association documents,"Condomínio, townhouse",https://www.floir.com/ | https://www2.myfloridalicense.com/condos-timeshares-mobile-homes/condominiums-and-cooperatives-sirs-reporting/,"• Apólice master ou certificate fornecido
+• Seguradora, período, cobertura e deductible informados
+• Prédio/associação cobertos
+• Não substitui confirmação com a associação ou seguradora","F.S. §718.111(11); para HOA, documentos constitutivos e apólice efetiva.
+Verificar coberturas, exclusões, deductible, vigência e responsabilidade por perdas. Certificate of insurance não substitui apólice/endossos; a cobertura master do condomínio não deve ser presumida para toda townhouse.
+Fontes: [1] · [2]","[ESCOPO PARCIAL] RESSALVA: abri as referências de Base Legal e os dois links exibidos. F.S. §718.111(11) é diretamente pertinente: regula seguro obrigatório do condomínio, coberturas, itens excluídos e responsabilidade do proprietário; a apólice, endossos, deductible e vigência efetivos ainda precisam ser conferidos. §720.303 é sobre governança/obrigações de HOA, não cobertura de seguro master. A homepage do Florida OIR é portal regulatório geral; o link DBPR/SIRS trata de inspeção estrutural e reservas, não comprova seguro. Portanto, §718.111(11) sustenta o enquadramento de seguro condominial, mas os demais links não verificam a apólice do prédio nem se aplicam necessariamente a townhouse/HOA.",,,,
+,Pré-oferta,Regras de aluguel,"Prazo mínimo, limite de locações, waiting period e aprovação",Declaration; bylaws; rules and amendments,"Condomínio, townhouse, HOA",https://www.miamidadeclerk.gov/clerk/official-records.page | https://library.municode.com/fl/miami_-_dade_county/codes/code_of_ordinances,"• Regras de locação presentes em declaration, bylaws, rules ou amendments
+• Prazo mínimo, limite de leases e waiting period, se previstos
+• Exigência de aprovação, se prevista
+• Regras públicas e privadas são mostradas separadamente","F.S. §718.110(13) e §720.306(1)(h), além da declaração e emendas.
+Prazo mínimo, limites e aprovação dependem das regras privadas válidas. A eficácia de emendas sobre locação varia com regime, data de aquisição e exceções legais; analisar separadamente permissões municipais.
+Fontes: [1] · [2]","[VALIDAÇÃO LOCAL] RESSALVA: F.S. §§718.110(13) e 720.306(1)(h) foram abertas; tratam de mudanças em restrições de locação (condomínio/HOA), mas não dizem qual prazo, limite ou aprovação vale para este imóvel; isso depende dos documentos registrados. Os links do Clerk e do Municode são diretórios/índice, não documentos específicos de associação nem regra municipal identificada. Para validação, obter declaration e emendas específicas nos Official Records do condado e regra municipal aplicável. Nenhuma divergência demonstrada entre as referências estaduais e o tema.",,,,
+,Pré-oferta,Regras de pets e ocupação,"Limites de animais, ocupantes e uso da unidade",Declaration; bylaws; rules and amendments,"Condomínio, townhouse, HOA",https://www.miamidadeclerk.gov/clerk/official-records.page | https://library.municode.com/fl/miami_-_dade_county/codes/code_of_ordinances,"• Limites de pets, ocupação e uso da unidade previstos nos documentos
+• Requisitos de aprovação ou registro
+• Versão e data da regra
+• Associação responsável pela regra","F.S. §§760.23 e 760.27; declaração/bylaws e regras válidas da associação.
+Restrições de pets e ocupação precisam respeitar não discriminação e acomodação razoável. Animal de assistência não deve ser tratado automaticamente como pet comum; verificar a regra específica e sua aplicação.
+Fontes: [1] · [2]","[ESCOPO PARCIAL] RESSALVA: abri os dois links legais e os dois links mostrados na coluna. F.S. §760.23 cobre discriminação em moradia; §760.27 cobre accommodation por disability/animal de apoio emocional — não estabelece limites gerais de pets ou ocupação. Clerk Official Records e Municode são diretórios, não documentos específicos da associação nem norma municipal identificada. Os limites concretos dependem da declaração/regras vigentes; qualquer aplicação deve observar fair housing e acomodação razoável. Os links citados sustentam apenas esse enquadramento, não os limites específicos do imóvel.",,,,
+,Pré-oferta,Restrições de reforma,"Aprovação, horários, responsabilidade e uso de elevador",Declaration; architectural rules; board rules,"Condomínio, townhouse, HOA",https://www.miamidadeclerk.gov/clerk/official-records.page | https://www.miamidade.gov/global/economy/building/construction-permitting-procedures.page,"• Aprovação de obras pela associação, se prevista
+• Regras de horários, áreas comuns e elevador, se documentadas
+• Responsabilidades do proprietário previstas
+• Requisito de permit público continua separado","F.S. §718.113(2) e §720.3035; F.S. §553.79.
+Aprovações privadas de reforma dependem do regime e documentos da associação, dentro dos limites legais. Aprovação da associação e permit público são exigências distintas; confirmar ambas conforme a obra.
+Fontes: [1] · [2] · [3]","[VALIDAÇÃO LOCAL] RESSALVA DE ESCOPO: abri os três estatutos e os dois links visíveis. §§718.113(2) e 720.3035 tratam de aprovação/controle arquitetônico de certas alterações; §553.79 exige licença pública quando aplicável. A página Official Records é diretório, não a declaration da associação. A página de Miami-Dade descreve procedimentos de permitting, não regras internas de condomínio. Esses links não estabelecem os horários, elevador e aprovação específicos do imóvel; conferir documentos/regras registrados da associação e órgão competente. As bases estaduais correspondem em geral a reforma, mas não certificam restrições específicas.",,,,
+,Pré-oferta,Responsabilidade de manutenção,Limite entre responsabilidade do dono e da associação,Declaration; bylaws; maintenance matrix,"Condomínio, townhouse",https://www.miamidadeclerk.gov/clerk/official-records.page,"• Responsabilidade por roof, exterior, foundation ou áreas comuns
+• Parte responsável: proprietário ou associação
+• Fonte documental e versão da regra
+• Itens não definidos ficam como pendência de confirmação","F.S. §718.113(1), §718.111(11) e declaração; para HOA, §720.303(1) e documentos constitutivos.
+Distinguir manutenção ordinária, reparação e responsabilidade após sinistro. Delimitar unidade, áreas comuns e limited common elements; matriz de manutenção deve corresponder ao instrumento vigente.
+Fontes: [1] · [2] · [3]","[VALIDAÇÃO LOCAL] RESSALVA: abri os links citados. F.S. §718.113(1) atribui à associação manutenção dos common elements, salvo limited common elements alocados ao dono pela declaration; esse instrumento delimita as responsabilidades. §718.111(11) regula principalmente seguro e só informa responsabilidades de reparo em contexto de perda/seguro; §720.303(1) dá poderes à HOA conforme lei e documentos, mas não define a matriz concreta de manutenção. Official Records é diretório, não a declaration deste imóvel. As referências são pertinentes ao tema em geral, mas roof/exterior/foundation específicos exigem a declaration e emendas vigentes.",,,,
+,Pré-oferta,Aprovação FHA do condomínio,Elegibilidade/aprovação FHA do projeto,HUD FHA Condo Search,Condomínio,https://entp.hud.gov/idapp/html/condlook.cfm | https://www.hud.gov/hud-partners/single-family-ins-condominiums,"• Condo ID FHA
+• Nome, cidade, county, estado e ZIP do projeto
+• Status: approved, expired, rejected ou outro status retornado
+• Data e método de aprovação, quando mostrados pela consulta","24 CFR §203.43b e requisitos HUD/FHA.
+Conferir aprovação do projeto, validade e condições. Falta de aprovação do projeto não exclui automaticamente Single-Unit Approval ou outras hipóteses previstas; aprovação FHA não garante aprovação do empréstimo do comprador.
+Fontes: [1] · [2]",OK,,,,
+,Pré-oferta,Relatos verificados de residentes,"Gestão, ruído, elevadores, manutenção, segurança e vivência de enchentes",Ask a Resident; Leevli Score,Principalmente condomínio,https://www.leevli.com/,"• Relatos verificados de moradores disponíveis na plataforma
+• Temas recorrentes: gestão, ruído, manutenção, elevadores, segurança e enchentes
+• Escopo do relato: prédio, unidade ou vizinhança
+• Conteúdo identificado como experiência de residente, não como registro oficial","F.S. §501.204; 16 CFR Part 465, quando o conteúdo se enquadrar em reviews/testimonials comerciais.
+Relatos são evidência complementar, não certificação jurídica. Documentar o sentido de “verificado”, origem e data; não apresentar experiência subjetiva ou score como prova oficial de segurança/conformidade.
+Fontes: [1] · [2]","[PROVA INSUFICIENTE] RESSALVA: abri os links de Base Legal e a homepage exibida. Leevli.com descreve a plataforma e “verified resident insights”, mas não demonstra como moradores são verificados nem comprova relatos de imóvel específico. F.S. §501.204 trata de práticas comerciais injustas/enganosas; a página FTC explica regras de reviews/testimonials, aplicáveis conforme o contexto. As referências sustentam cautela sobre veracidade e transparência, não um padrão legal de verificação de residentes. Relatos são evidência complementar, não certificação oficial.",,,,
+,Pós-oferta,Compatibilidade entre vendedor do contrato e proprietário registrado,Verifica a consistência documental e os riscos contratuais identificáveis após a oferta.,Purchase Contract + Miami-Dade Clerk Official Records,Todos,https://www.miamidadeclerk.gov/clerk/official-records.page | https://www.floridarealtors.org/,"• Nome do vendedor no contrato
+• Nome do proprietário no registro público
+• Entidade, trust ou pessoa indicada em cada fonte
+• Divergências para revisão, sem concluir legitimidade da venda","F.S. §§689.01, 695.01 e 725.01; contrato e documentos de representação.
+Comparar vendedor com titular registral e verificar poderes de quem assina por empresa, trust, espólio ou procuração. Coincidência de nomes não comprova autoridade; divergência exige documentação e revisão jurídica.
+Fontes: [1] · [2] · [3]","[VALIDAÇÃO DOCUMENTAL] RESSALVA DE ESCOPO: abri os três estatutos e os dois links exibidos. §§689.01/695.01 tratam da forma de conveyance e registro/notice, e §725.01 da exigência escrita para contrato de venda de imóvel; são pertinentes à consistência documental, mas não determinam por si sós a autoridade do signatário. Official Records e Florida Realtors são páginas gerais, não registro individual nem contrato. A OBS deve ser tratada como checklist; poderes de representante precisam de documentos específicos.",,,,
+,Pós-oferta,Descrição legal e unidade no contrato,Verifica a consistência documental e os riscos contratuais identificáveis após a oferta.,Purchase Contract + deed + parcel record,Todos,https://www.miamidadeclerk.gov/clerk/official-records.page | https://www.floridarealtors.org/,"• Endereço e número da unidade no contrato
+• Descrição legal e parcel/folio do registro
+• Deed e instrumento de referência
+• Divergências de identidade do imóvel","F.S. §725.01; §718.104 para unidade condominial; contrato, deed e anexos.
+Confrontar identificação contratual com descrição jurídica registrada e direitos incluídos. Endereço/folio isolado não resolve conflito de unidade, vaga ou parcela; correções dependem de instrumento adequado.
+Fontes: [1] · [2]","[VALIDAÇÃO DOCUMENTAL] RESSALVA: abri §§725.01 e 718.104, além dos dois links da coluna. §718.104(4) exige que a declaration identifique unidades e descrição legal; §725.01 exige escrita assinada para contrato de venda de terra. Official Records e Florida Realtors são links gerais, não documentos do imóvel/contrato. A base legal corresponde ao tema de identificação jurídica, mas validar a unidade, vaga e direitos exige confrontar contrato, declaration e deed específicos.",,,,
+,Pós-oferta,"Assinaturas, iniciais, anexos e campos ausentes",Verifica a consistência documental e os riscos contratuais identificáveis após a oferta.,Purchase Contract; riders; addenda,Todos,https://www.floridarealtors.org/ | https://www.floridabar.org/,"• Assinaturas e iniciais presentes no documento
+• Datas de assinatura
+• Riders, addenda e exhibits referenciados
+• Campos em branco ou anexos ausentes","F.S. §725.01 e §668.50(7); contrato e anexos incorporados.
+Conferir assinaturas, consentimento eletrônico e documentos necessários à formação do acordo. Iniciais/campos ausentes não tornam todo contrato automaticamente inválido; formalidades do deed são análise distinta das do contrato de compra.
+Fontes: [1] · [2]","[VALIDAÇÃO DOCUMENTAL] RESSALVA: os dois estatutos e os dois sites genéricos foram abertos. §725.01 exige escrito assinado para contrato de venda de imóvel; §668.50 reconhece registros e assinaturas eletrônicas quando satisfeitos os requisitos e consentimento. Florida Realtors/Florida Bar são homepages, não orientação específica ou contrato. A base legal é pertinente às formalidades gerais, mas não conclui validade/integridade deste contrato: conferir cada assinatura, consentimento, anexos e versão assinada.",,,,
+,Pós-oferta,Conflitos entre documentos,Verifica a consistência documental e os riscos contratuais identificáveis após a oferta.,"Contrato, addenda, disclosure, title, HOA, inspection e lender documents",Todos,https://www.floridarealtors.org/ | https://www.floridabar.org/,"• Nomes, endereço/unidade, preço e depósitos comparados entre documentos
+• Datas, deadlines e termos divergentes
+• Documento, página e seção de cada ocorrência
+• Conflitos preservados sem escolher automaticamente um vencedor","Contrato executado, riders/addenda e cláusulas de integração, alteração e prevalência; F.S. §725.01.
+Comparar versões, assinaturas e termos. Não existe regra universal de que o documento mais recente sempre prevalece; registrar o conflito e submeter sua resolução jurídica antes de calcular obrigações.
+Fontes: [1] · [2]","[VALIDAÇÃO CONTRATUAL] RESSALVA: abri §725.01 e os dois links da coluna. §725.01 sustenta a exigência escrita/assinada de contrato de venda de imóvel; o artigo específico da Florida Realtors explica contratos, prazos e cláusulas, mas é orientação geral, não lei nem contrato desta transação. A homepage do Florida Realtors não é fonte específica. A base corresponde a avaliação de conflitos contratuais, porém a prioridade entre documentos deve ser determinada pela redação e assinaturas do pacote executado; não há regra universal de prevalência.",,,,
+,Pós-oferta,Seller disclosures,Verifica a consistência documental e os riscos contratuais identificáveis após a oferta.,Seller disclosure; flood/lead/property forms,Todos,https://www.floridarealtors.org/ | https://www.fema.gov/flood-maps/tools-resources/flood-map-products/national-flood-hazard-layer,"• Disclosures recebidos e tipo de formulário
+• Eventos de flood, lead ou condição do imóvel declarados
+• Página, seção e data do documento
+• Campos ausentes ou documentos referenciados e não entregues","Johnson v. Davis, 480 So. 2d 625 (Fla. 1985); F.S. §689.302; 42 USC §4852d; §§718.503/720.401 conforme regime.
+Verificar fatos materiais conhecidos não aparentes, flood disclosure e lead para moradia abrangida anterior a 1978, além de disclosures de associação. Os deveres e direitos de cancelamento variam por hipótese.
+Fontes: [1] · [2] · [3] · [4] · [5]","[LINK INACESSÍVEL | LINK ALTERNATIVO] RESSALVA: abri as 5 referências numeradas e os 2 links exibidos. O PDF da Florida Bar retornou 403; o U.S. Code House estava em manutenção; o link FEMA NFHL retornou erro interno. F.S. §689.302 foi aberta e estabelece flood disclosure residencial; §§718.503 e 720.401 tratam de disclosures específicos de condo/HOA (718.503 principalmente venda por developer; 720.401 disclosure HOA). F.S. §689.302/718.503 sustentam flood disclosures, mas a referência inacessível de lead (42 USC §4852d) não foi confirmada nesta rodada. Para lead, fonte federal alternativa: EPA Lead-Based Paint Disclosure Rule https://www.epa.gov/lead/real-estate-disclosures-about-potential-lead-hazards. F.S. §720.401: https://www.flsenate.gov/Laws/Statutes/2026/720.401",,,,
+,Pós-oferta,Title objections e exceções,Verifica a consistência documental e os riscos contratuais identificáveis após a oferta.,Title commitment; survey; recorded documents,Todos,https://www.miamidadeclerk.gov/clerk/official-records.page | https://www.floridarealtors.org/,"• Title commitment e exceções listadas
+• Survey, easements, liens ou instrumentos mencionados
+• Prazo para objections, se constar no contrato
+• Documento/página de origem; não certifica title","F.S. §627.7845; title commitment, survey e cláusulas de title do contrato.
+A seguradora deve examinar a segurabilidade; o prazo e procedimento de objeção vêm do contrato aplicável. Listar exceções e exigências sem certificar título nem presumir que toda exceção é sanável.
+Fontes: [1] · [2]","[VALIDAÇÃO CONTRATUAL] RESSALVA: abri §627.7845, o artigo específico da Florida Realtors e os dois links exibidos. §627.7845 exige determinação de segurabilidade via busca razoável antes da title insurer emitir commitment/apólice e retenção da prova; não define prazo contratual nem direito de objeção do comprador. O artigo FL Realtors é explicação geral, não lei nem compromisso. Official Records é diretório. A base é relacionada à pesquisa de título, mas objections/deadlines dependem do contrato efetivo e do title commitment.",,,,
+,Pós-oferta,Prazo de financiamento,Verifica a consistência documental e os riscos contratuais identificáveis após a oferta.,Purchase Contract; financing addendum; lender notices,Todos,https://www.floridarealtors.org/ | https://www.consumerfinance.gov/owning-a-home/,"• Effective date do contrato
+• Application deadline e financing deadline
+• Regra de cálculo de dias, se definida no contrato
+• Notice deadline, destinatário e método de entrega","Base contratual: financing clause, effective date, time/notice provisions e addenda assinados.
+Extrair prazos de solicitação, aprovação e aviso do documento efetivo. Não presumir prazo legal único; extensão de closing não estende automaticamente o loan approval period.
+Fontes: [1] · [2]","[VALIDAÇÃO CONTRATUAL] RESSALVA: abri o FAQ de financiamento, o artigo geral de contratos, a homepage Florida Realtors e o CFPB Owning a Home. O FAQ trata de deadlines e avisa que estender closing não estende automaticamente prazo de loan approval; o artigo geral explica que prazos dependem do formulário/termos, e CFPB dá orientação ao consumidor, sem estabelecer prazo contratual da Florida. A base é orientação sobre financing contingency; o prazo desta linha só é confirmável pelo contrato/adendos efetivamente assinados, não por regra legal única.",,,,
+,Pós-oferta,Financing contingency real,Verifica a consistência documental e os riscos contratuais identificáveis após a oferta.,Purchase Contract; financing addendum,Todos,https://www.floridarealtors.org/ | https://www.consumerfinance.gov/owning-a-home/,"• Existência da financing contingency
+• Evento que satisfaz a condição: preapproval, approval, commitment ou outro
+• Prazo, extensão e waiver, se previstos
+• Cláusula/página de origem","Base contratual: contingência de financiamento efetivamente acordada.
+Verificar tipo/termos do empréstimo, Loan Approval, diligência, avisos e waiver. Preapproval não deve ser equiparado automaticamente a cumprimento da contingência; verificar a versão e redação assinada.
+Fontes: [1]","[VALIDAÇÃO CONTRATUAL] RESSALVA: abri o FAQ sobre financing contingency, artigo geral de contratos, homepage Florida Realtors e CFPB. O FAQ trata diretamente de financiamento, loan approval, appraisal e efeito de notice/deadline nos modelos Florida Realtors/Florida Bar; o artigo geral reforça que direitos dependem do contrato. CFPB é educação de compra, não direito contratual estadual. Fontes são adequadas como referência de checklist, mas nenhuma confirma a contingência concreta sem examinar contrato e rider executados.",,,,
+,Pós-oferta,"Appraisal, cash adicional e condições do lender",Verifica a consistência documental e os riscos contratuais identificáveis após a oferta.,Financing addendum; loan commitment; lender notices,Todos,https://www.consumerfinance.gov/owning-a-home/ | https://www.floridarealtors.org/,"• Appraisal contingency ou condição relacionada
+• Valor, prazo e necessidade de cash adicional, se descritos
+• Loan commitment e condições do lender recebidas
+• Direito de renegociação/termination somente conforme texto documental","Base contratual: appraisal/financing clauses, riders e loan commitment.
+Não presumir contingência geral de appraisal pelo preço de compra. Falta de financiamento, appraisal baixo ou cash adicional produzem efeitos conforme as cláusulas e avisos aplicáveis; condições do lender não alteram sozinhas o contrato de compra.
+Fontes: [1] · [2]","[VALIDAÇÃO CONTRATUAL] RESSALVA: abri os dois links da OBS e as duas fontes mencionadas em I. Florida Realtors FAQs explica appraisal dentro da financing contingency e distingue Addendum F; o artigo geral reforça ausência de contingência automática de appraisal no formulário padrão. CFPB é orientação geral ao comprador. A base corresponde ao tema, mas os efeitos de appraisal baixo, caixa adicional e cancelamento dependem do contrato, rider e financiamento específicos; não existe conclusão do caso sem esses documentos.",,,,
+,Pós-oferta,Risco sobre depósito,Verifica a consistência documental e os riscos contratuais identificáveis após a oferta.,Purchase Contract; escrow instructions; financing/inspection provisions,Todos,https://www.floridarealtors.org/ | https://www.floridabar.org/,"• Valor e vencimento do depósito
+• Escrow holder e instruções de escrow
+• Cláusulas de refund, default ou exposição ao risco
+• Condições de financing/inspection relacionadas","Contrato: deposit, escrow, default e contingências; F.S. §475.25(1)(d),(k) quando o escrow é de broker.
+Reembolso/perda dependem do fato, cláusula e avisos; não são automáticos. Identificar custodiante: broker, advogado ou title agent seguem regimes próprios. Disputa exige revisão antes de orientar liberação.
+Fontes: [1] · [2]","[ESCOPO PARCIAL] RESSALVA: abri F.S. §475.25 e todos os links exibidos. §475.25 disciplina brokers/licenciados e escrow: exige tratamento conforme acordo/lei, e trata de demandas conflitantes e procedimentos para resolver; aplica-se ao escrow sob custódia de broker, não necessariamente advogado/title agent. Florida Realtors contrato específico é orientação geral; homepage e Florida Bar são links genéricos. A base tem relação com depósito/risco, mas perda/reembolso depende do contrato, custodiante e fatos; sem isso não presumir resultado.",,,,
+,Pós-oferta,Prazo e direito de inspeção,Verifica a consistência documental e os riscos contratuais identificáveis após a oferta.,Purchase Contract; inspection report; repair requests,Todos,https://www.floridarealtors.org/ | https://www.floridabar.org/,"• Período de inspeção
+• Direito de repair request, termination ou notice conforme contrato
+• Inspection report e repair requests recebidos
+• Datas, cláusulas e páginas de origem","Base contratual: inspection clause e versão AS IS ou standard; addenda.
+Extrair período, escopo, avisos e direitos de repair/termination. Não presumir prazo ou direito universal de cancelamento; pedido de reparo não deve ser tratado como extensão automática.
+Fontes: [1] · [2]","[VALIDAÇÃO CONTRATUAL] RESSALVA: abri o artigo de inspeção da Florida Realtors, artigo geral de contratos e os sites Florida Realtors/Florida Bar. O artigo específico fala de inspeções gerais e especializadas, prazos contratuais, permits abertos e possível perda de direito de reparo após deadline; a legislação não fixa prazo universal para inspeção. Os dois sites genéricos não confirmam prazo. A referência corresponde a checklist de inspeção, mas o prazo e os direitos de termination/repair dependem da versão do contrato e addenda executados.",,,,
+,Pós-oferta,Prazos de closing e possession,Verifica a consistência documental e os riscos contratuais identificáveis após a oferta.,Purchase Contract; addenda; extensions,Todos,https://www.floridarealtors.org/ | https://www.floridabar.org/,"• Closing date e possession date
+• Extensions, conditions precedent e proration, se previstas
+• Addenda que alteram datas
+• Página/seção de cada obrigação","Base contratual: closing, possession e addenda; 12 CFR §1026.19(f)(1)(ii) para financiamento abrangido.
+Confirmar datas, entrega da posse e extensões. Closing Disclosure exige antecedência de 3 dias úteis nas operações abrangidas; essa regra não fixa nem altera automaticamente closing/possession no contrato.
+Fontes: [1] · [2]","[ESCOPO PARCIAL] RESSALVA: abri 12 CFR §1026.19 e todos os links exibidos. A regra CFPB regula disclosures do empréstimo e exige em certas operações Closing Disclosure ao consumidor ao menos 3 dias úteis antes da consumação; isso não define nem altera por si só closing date ou possession no contrato imobiliário. O artigo Florida Realtors e as homepages são orientação geral. Base parcialmente pertinente ao calendário do financiamento, mas para closing/possession do negócio prevalecem contrato e addenda assinados; separar prazo de disclosure do lender.",,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,Categoria,Linhas,O que sinaliza,,,,,,,,,
+,,Link inacessível,"13, 14, 16, 17, 18, 21, 30, 35, 53","A página retornou erro ou não permitiu conferir o conteúdo. Isso indica falha de acesso na verificação, não prova, por si só, que a URL foi removida.",,,,,,,,,
+,,Link alternativo,"13, 14, 16, 17, 18, 19, 20, 21, 30, 32, 53",O OBS já contém um link alternativo sugerido.,,,,,,,,,
+,,Escopo parcial,"19, 32, 42, 44, 58, 60",A fonte aborda parte do tema ou se aplica apenas a certas situações; o texto do OBS explica o limite.,,,,,,,,,
+,,Conteúdo divergente,20,"O link indicado trata de inundação, enquanto o item é sobre risco de vento/furacão.",,,,,,,,,
+,,Validação local,"43, 45, 46",A resposta depende das regras ou documentos da associação e/ou da jurisdição do imóvel.,,,,,,,,,
+,,Prova insuficiente,48,As fontes não comprovam que os relatos de moradores foram verificados.,,,,,,,,,
+,,Validação documental,"49, 50, 51",A conclusão depende dos documentos específicos do imóvel ou da transação.,,,,,,,,,
+,,Validação contratual,"52, 54, 55, 56, 57, 59","A conclusão depende do contrato, adendos, prazos ou avisos assinados.",,,,,,,,,
